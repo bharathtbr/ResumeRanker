@@ -1,0 +1,158 @@
+<svg width="900" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header -->
+  <rect x="0" y="0" width="900" height="100" fill="url(#headerGradient)"/>
+  <text x="450" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="white">
+    SCORING RESULTS
+  </text>
+  <text x="450" y="75" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#FFB020">
+    John Doe Resume
+  </text>
+  <text x="850" y="30" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#CCC">
+    Scored: Jan 31, 2026
+  </text>
+
+  <!-- Overall Score Card -->
+  <rect x="200" y="120" width="500" height="180" rx="10" fill="white" stroke="#4CAF50" stroke-width="3" filter="url(#shadow)"/>
+
+  <!-- Score -->
+  <text x="450" y="220" font-family="Arial, sans-serif" font-size="96" font-weight="bold" text-anchor="middle" fill="#4CAF50">
+    92
+  </text>
+  <text x="520" y="220" font-family="Arial, sans-serif" font-size="48" text-anchor="start" fill="#666">
+    /100
+  </text>
+  <text x="450" y="250" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#232F3E">
+    OVERALL SCORE
+  </text>
+
+  <!-- Recommendation Badge -->
+  <rect x="250" y="260" width="400" height="30" rx="5" fill="#4CAF50"/>
+  <text x="450" y="282" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    ✓ STRONG CANDIDATE - Schedule Interview
+  </text>
+
+  <!-- Breakdown Section -->
+  <rect x="50" y="330" width="800" height="180" rx="10" fill="#F5F5F5"/>
+  <text x="70" y="360" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#232F3E">
+    BREAKDOWN
+  </text>
+
+  <!-- Core Skills Bar -->
+  <text x="70" y="390" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#666">
+    Core Skills
+  </text>
+  <text x="200" y="390" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1B9C85">
+    95%
+  </text>
+  <rect x="250" y="375" width="500" height="12" rx="6" fill="#E0E0E0"/>
+  <rect x="250" y="375" width="475" height="12" rx="6" fill="#1B9C85"/>
+  <text x="770" y="385" font-family="Arial, sans-serif" font-size="24" fill="#FFB020">⚡</text>
+
+  <!-- Experience Bar -->
+  <text x="70" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#666">
+    Experience
+  </text>
+  <text x="200" y="430" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2196F3">
+    90%
+  </text>
+  <rect x="250" y="415" width="500" height="12" rx="6" fill="#E0E0E0"/>
+  <rect x="250" y="415" width="450" height="12" rx="6" fill="#2196F3"/>
+  <text x="770" y="425" font-family="Arial, sans-serif" font-size="24" fill="#4CAF50">✓</text>
+
+  <!-- Additional Bar -->
+  <text x="70" y="470" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#666">
+    Additional
+  </text>
+  <text x="200" y="470" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#6B48FF">
+    85%
+  </text>
+  <rect x="250" y="455" width="500" height="12" rx="6" fill="#E0E0E0"/>
+  <rect x="250" y="455" width="425" height="12" rx="6" fill="#6B48FF"/>
+  <text x="770" y="465" font-family="Arial, sans-serif" font-size="24" fill="#FFB020">★</text>
+
+  <!-- Skill Matches Section -->
+  <text x="70" y="545" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#232F3E">
+    SKILL MATCHES (5/5)
+  </text>
+
+  <!-- Python Skill Card -->
+  <rect x="50" y="560" width="800" height="80" rx="8" fill="white" stroke="#4CAF50" stroke-width="0" filter="url(#shadow)"/>
+  <rect x="50" y="560" width="4" height="80" fill="#4CAF50"/>
+  <text x="75" y="585" font-family="Arial, sans-serif" font-size="24" fill="#4CAF50">✅</text>
+  <text x="110" y="590" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#232F3E">Python</text>
+  <text x="220" y="590" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1B9C85">5.5 yrs</text>
+  <text x="285" y="590" font-family="Arial, sans-serif" font-size="16" fill="#999">/</text>
+  <text x="300" y="590" font-family="Arial, sans-serif" font-size="16" fill="#666">5 req</text>
+  <rect x="370" y="575" width="90" height="24" rx="12" fill="#4CAF50"/>
+  <text x="415" y="592" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">EXCEEDS</text>
+  <text x="75" y="615" font-family="Arial, sans-serif" font-size="13" fill="#333">Evidence: "Built scalable backend APIs using Python Flask and FastAPI..."</text>
+  <text x="75" y="632" font-family="Arial, sans-serif" font-size="11" fill="#999">TechCorp Inc. | Senior Backend Engineer</text>
+
+  <!-- AWS Skill Card (Warning) -->
+  <rect x="50" y="655" width="800" height="80" rx="8" fill="white" stroke="#FFB020" stroke-width="0" filter="url(#shadow)"/>
+  <rect x="50" y="655" width="4" height="80" fill="#FFB020"/>
+  <text x="75" y="680" font-family="Arial, sans-serif" font-size="24" fill="#FFB020">⚠️</text>
+  <text x="110" y="685" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#232F3E">AWS</text>
+  <text x="220" y="685" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FF9900">2.5 yrs</text>
+  <text x="285" y="685" font-family="Arial, sans-serif" font-size="16" fill="#999">/</text>
+  <text x="300" y="685" font-family="Arial, sans-serif" font-size="16" fill="#666">3 req</text>
+  <rect x="370" y="670" width="80" height="24" rx="12" fill="#FFB020"/>
+  <text x="410" y="687" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">CLOSE</text>
+  <text x="75" y="710" font-family="Arial, sans-serif" font-size="13" fill="#333">Evidence: "Architected AWS infrastructure using Lambda, EC2, S3, RDS..."</text>
+  <text x="75" y="727" font-family="Arial, sans-serif" font-size="11" fill="#999">TechCorp Inc. | Senior Backend Engineer</text>
+
+  <!-- PostgreSQL Skill Card -->
+  <rect x="50" y="750" width="800" height="80" rx="8" fill="white" stroke="#4CAF50" stroke-width="0" filter="url(#shadow)"/>
+  <rect x="50" y="750" width="4" height="80" fill="#4CAF50"/>
+  <text x="75" y="775" font-family="Arial, sans-serif" font-size="24" fill="#4CAF50">✅</text>
+  <text x="110" y="780" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#232F3E">PostgreSQL</text>
+  <text x="240" y="780" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1B9C85">5.5 yrs</text>
+  <text x="305" y="780" font-family="Arial, sans-serif" font-size="16" fill="#999">/</text>
+  <text x="320" y="780" font-family="Arial, sans-serif" font-size="16" fill="#666">3 req</text>
+  <rect x="390" y="765" width="90" height="24" rx="12" fill="#4CAF50"/>
+  <text x="435" y="782" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">EXCEEDS</text>
+  <text x="75" y="805" font-family="Arial, sans-serif" font-size="13" fill="#333">Evidence: "Developed data pipelines in Python with PostgreSQL backend..."</text>
+  <text x="75" y="822" font-family="Arial, sans-serif" font-size="11" fill="#999">DataSoft LLC | Backend Developer</text>
+
+  <!-- Docker Skill Card -->
+  <rect x="50" y="845" width="800" height="80" rx="8" fill="white" stroke="#4CAF50" stroke-width="0" filter="url(#shadow)"/>
+  <rect x="50" y="845" width="4" height="80" fill="#4CAF50"/>
+  <text x="75" y="870" font-family="Arial, sans-serif" font-size="24" fill="#4CAF50">✅</text>
+  <text x="110" y="875" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#232F3E">Docker</text>
+  <text x="220" y="875" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1B9C85">2.5 yrs</text>
+  <text x="285" y="875" font-family="Arial, sans-serif" font-size="16" fill="#999">/</text>
+  <text x="300" y="875" font-family="Arial, sans-serif" font-size="16" fill="#666">2 req</text>
+  <rect x="370" y="860" width="90" height="24" rx="12" fill="#4CAF50"/>
+  <text x="415" y="877" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">EXCEEDS</text>
+  <text x="75" y="900" font-family="Arial, sans-serif" font-size="13" fill="#333">Evidence: "Led Docker/Kubernetes migration for containerized deployments..."</text>
+  <text x="75" y="917" font-family="Arial, sans-serif" font-size="11" fill="#999">TechCorp Inc. | Senior Backend Engineer</text>
+
+  <!-- Kubernetes text (5th skill, abbreviated) -->
+  <text x="50" y="955" font-family="Arial, sans-serif" font-size="14" fill="#666">
+    ✅ Kubernetes: 2.5 yrs / 2 req - EXCEEDS
+  </text>
+
+  <!-- Footer note -->
+  <text x="450" y="985" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#999">
+    Generated by AI Resume Scoring System | TekPixi Engineering
+  </text>
+
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#232F3E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#37474F;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

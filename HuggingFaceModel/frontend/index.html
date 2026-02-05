@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume & JD Matching - AI System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #555;
+      margin-top: 30px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    input[type="file"], input[type="text"] {
+      padding: 8px;
+      margin: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow-x: auto;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+    .section {
+      background-color: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .status {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .status.success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .status.error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <h1>🤖 AI Resume Matching System</h1>
+  
+  <div id="serverStatus" class="status"></div>
+
+  <div class="section">
+    <h2>📄 Upload Resume</h2>
+    <input type="file" id="resumeFile" accept=".pdf,.docx" />
+    <button onclick="uploadResume()">Upload Resume</button>
+    <button onclick="uploadResumes()">Upload All Resumes in Folder</button>
+    <div id="uploadStatus"></div>
+  </div>
+
+  <div class="section">
+    <h2>🔍 Search Resumes</h2>
+    <textarea id="jdText" rows="10" placeholder="Paste Job Description here...
+
+Example:
+Senior .NET Developer
+- 10+ years experience with C#, ASP.NET Core
+- Strong AWS cloud experience (EC2, Lambda, S3)
+- PostgreSQL database expertise
+- React frontend experience (nice to have)"></textarea>
+    <br>
+    <button onclick="searchResumes()">Search Resumes</button>
+    <button onclick="agentQuery()">Search with AI Agent</button>
+  </div>
+
+  <div class="section">
+    <h2>💡 Natural Language Query</h2>
+    <input type="text" id="query" placeholder="Ask anything... e.g., 'Find Python developers with 5+ years'" size="80"/>
+    <button onclick="agentQuery()">Ask AI Agent</button>
+  </div>
+
+  <div class="section">
+    <h2>📊 Results</h2>
+    <pre id="results">Results will appear here...</pre>
+  </div>
+
+  <script>
+    // Single API endpoint - port 8000 only!
+    const API_BASE = "http://localhost:8000";
+
+    // Check server status on load
+    window.onload = checkServerStatus;
+
+    async function checkServerStatus() {
+      try {
+        const res = await fetch(`${API_BASE}/`, { timeout: 2000 });
+        const data = await res.json();
+        
+        document.getElementById('serverStatus').innerHTML = 
+          `✅ Server Online: ${data.message}`;
+        document.getElementById('serverStatus').className = 'status success';
+      } catch (error) {
+        document.getElementById('serverStatus').innerHTML = 
+          `❌ Server Offline: Please start the server with 'python start_combined.py'`;
+        document.getElementById('serverStatus').className = 'status error';
+      }
+    }
+
+    async function uploadResume() {
+      const fileInput = document.getElementById('resumeFile');
+      const file = fileInput.files[0];
+      
+      if (!file) { 
+        alert("Please select a resume file"); 
+        return; 
+      }
+
+      const statusDiv = document.getElementById('uploadStatus');
+      statusDiv.innerHTML = '⏳ Uploading and parsing resume...';
+
+      try {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        const res = await fetch(`${API_BASE}/upload`, { 
+          method: 'POST', 
+          body: formData 
+        });
+        
+        const json = await res.json();
+        
+        statusDiv.innerHTML = `
+          <div class="status success">
+            ✅ Resume Uploaded Successfully!<br>
+            <strong>Name:</strong> ${json.name || 'N/A'}<br>
+            <strong>Skills Found:</strong> ${json.skills_count || 0}<br>
+            <strong>Experience Skills:</strong> ${json.experience_skills || 0}<br>
+            <strong>Chunks Created:</strong> ${json.chunks || 0}
+          </div>
+        `;
+        
+        console.log('Upload result:', json);
+        
+      } catch (error) {
+        statusDiv.innerHTML = `
+          <div class="status error">
+            ❌ Error: ${error.message}
+          </div>
+        `;
+        console.error('Upload error:', error);
+      }
+    }
+
+    async function uploadResumes() {
+      const statusDiv = document.getElementById('uploadStatus');
+      statusDiv.innerHTML = '⏳ Uploading all resumes from folder...';
+
+      try {
+        const res = await fetch(`${API_BASE}/upload_folder`, { 
+          method: 'POST' 
+        });
+        
+        const json = await res.json();
+        
+        statusDiv.innerHTML = `
+          <div class="status success">
+            ✅ Batch Upload Complete!<br>
+            ${JSON.stringify(json, null, 2)}
+          </div>
+        `;
+        
+      } catch (error) {
+        statusDiv.innerHTML = `
+          <div class="status error">
+            ❌ Error: ${error.message}
+          </div>
+        `;
+      }
+    }
+
+    async function searchResumes() {
+      const jdText = document.getElementById('jdText').value;
+      
+      if (!jdText) { 
+        alert("Please paste a Job Description"); 
+        return; 
+      }
+
+      document.getElementById('results').innerText = '⏳ Searching for matching candidates...';
+
+      try {
+        const res = await fetch(`${API_BASE}/search/search_resume`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            query: jdText,
+            min_years: 0,
+            top_k: 10
+          })
+        });
+        
+        const json = await res.json();
+        document.getElementById('results').innerText = JSON.stringify(json, null, 2);
+        
+      } catch (error) {
+        document.getElementById('results').innerText = `❌ Error: ${error.message}`;
+      }
+    }
+
+    async function agentQuery() {
+      // Get query from either JD textarea or query input
+      const jdText = document.getElementById('jdText').value;
+      const queryText = document.getElementById('query').value;
+      
+      const query = queryText || jdText;
+      
+      if (!query) { 
+        alert("Please enter a job description or query"); 
+        return; 
+      }
+
+      document.getElementById('results').innerText = '⏳ AI Agent processing your request...';
+
+      try {
+        const res = await fetch(`${API_BASE}/agent/agent_query`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query })
+        });
+        
+        const json = await res.json();
+        document.getElementById('results').innerText = JSON.stringify(json, null, 2);
+        
+      } catch (error) {
+        document.getElementById('results').innerText = `❌ Error: ${error.message}\n\nMake sure the server is running with agent support.`;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Requirements for Enhanced Resume Parsing Lambda with Job Context
+
+# Existing dependencies
+boto3>=1.26.0
+psycopg2-binary>=2.9.5
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+docx2txt>=0.8
+
+# NEW: Date parsing for job history
+python-dateutil>=2.8.2

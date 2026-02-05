@@ -1,0 +1,7 @@
+boto3
+botocore
+docx2txt
+PyPDF2
+pillow
+psycopg2-binary==2.9.9
+numpy==2.0.1 --only-binary=:all:

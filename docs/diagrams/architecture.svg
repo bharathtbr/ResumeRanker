@@ -1,0 +1,145 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#232F3E">
+    AI-Powered Resume Screening Architecture
+  </text>
+
+  <!-- Phase 1: Upload -->
+  <g id="upload-section">
+    <rect x="50" y="100" width="300" height="400" rx="10" fill="#FFF4E6" stroke="#FF9900" stroke-width="3"/>
+    <text x="200" y="140" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#FF9900">
+      PHASE 1: UPLOAD
+    </text>
+
+    <!-- Upload icon -->
+    <circle cx="200" cy="200" r="40" fill="#FF9900" opacity="0.2"/>
+    <path d="M 200 180 L 200 220 M 180 200 L 200 180 L 220 200" stroke="#FF9900" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <text x="200" y="270" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">
+      📄 Resume (PDF/DOCX)
+    </text>
+    <text x="200" y="300" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">
+      💼 LinkedIn Profile
+    </text>
+    <text x="200" y="330" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">
+      ☁️ AWS S3 Bucket
+    </text>
+
+    <rect x="100" y="370" width="200" height="40" rx="5" fill="#FF9900"/>
+    <text x="200" y="395" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      S3 Event Trigger
+    </text>
+
+    <text x="200" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      &lt; 1 second
+    </text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 350 300 L 430 300" stroke="#FF9900" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Phase 2: Process -->
+  <g id="process-section">
+    <rect x="450" y="100" width="300" height="400" rx="10" fill="#E8F4F8" stroke="#232F3E" stroke-width="3"/>
+    <text x="600" y="140" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#232F3E">
+      PHASE 2: PROCESS
+    </text>
+
+    <!-- Brain icon -->
+    <circle cx="600" cy="200" r="40" fill="#232F3E" opacity="0.2"/>
+    <text x="600" y="215" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">🤖</text>
+
+    <text x="600" y="270" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      🔍 Extract Skills (Claude AI)
+    </text>
+    <text x="600" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      📊 Parse Work History
+    </text>
+    <text x="600" y="320" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      ⏱️ Calculate Experience
+    </text>
+    <text x="600" y="345" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      🧩 Create Chunks
+    </text>
+    <text x="600" y="370" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      🔢 Generate Embeddings
+    </text>
+
+    <rect x="500" y="390" width="200" height="40" rx="5" fill="#232F3E"/>
+    <text x="600" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      Lambda Parser
+    </text>
+
+    <text x="600" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      &lt; 30 seconds
+    </text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 750 300 L 830 300" stroke="#FF9900" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Phase 3: Score -->
+  <g id="score-section">
+    <rect x="850" y="100" width="300" height="400" rx="10" fill="#E8F8F5" stroke="#1B9C85" stroke-width="3"/>
+    <text x="1000" y="140" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1B9C85">
+      PHASE 3: SCORE
+    </text>
+
+    <!-- Trophy icon -->
+    <circle cx="1000" cy="200" r="40" fill="#1B9C85" opacity="0.2"/>
+    <text x="1000" y="215" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">🏆</text>
+
+    <text x="1000" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1B9C85">
+      Overall Score: 92/100
+    </text>
+    <text x="1000" y="300" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      ✅ Skill Matches
+    </text>
+    <text x="1000" y="325" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      📝 Evidence Quotes
+    </text>
+    <text x="1000" y="350" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      📈 Experience Breakdown
+    </text>
+    <text x="1000" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      🎯 Detailed Reasoning
+    </text>
+
+    <rect x="900" y="390" width="200" height="40" rx="5" fill="#1B9C85"/>
+    <text x="1000" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      Lambda Scorer
+    </text>
+
+    <text x="1000" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      &lt; 45 seconds
+    </text>
+  </g>
+
+  <!-- Tech Stack Bar at Bottom -->
+  <rect x="50" y="520" width="1100" height="60" rx="5" fill="#232F3E"/>
+  <text x="600" y="545" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    Technology Stack
+  </text>
+  <text x="200" y="565" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#FFB020">
+    AWS Lambda
+  </text>
+  <text x="400" y="565" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#FFB020">
+    Claude 3.5 Sonnet
+  </text>
+  <text x="600" y="565" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#FFB020">
+    PostgreSQL
+  </text>
+  <text x="800" y="565" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#FFB020">
+    S3 Vectors
+  </text>
+  <text x="1000" y="565" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#FFB020">
+    Amazon Titan
+  </text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#FF9900" />
+    </marker>
+  </defs>
+</svg>

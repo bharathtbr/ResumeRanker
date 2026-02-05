@@ -1,0 +1,32 @@
+# Resume Matching System - Dependencies
+# Uses HuggingFace + Groq (NO AWS Bedrock)
+
+# Core FastAPI
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+
+# Database
+psycopg2-binary==2.9.9
+
+# Groq LLM (instead of AWS Bedrock)
+groq==0.4.1
+
+# HuggingFace & ML
+sentence-transformers==2.2.2
+torch==2.1.0
+transformers==4.35.0
+
+# Document Processing
+PyPDF2==3.0.1
+python-docx==1.1.0
+docx2txt==0.8
+
+# LangChain & Groq (for Agent)
+langchain==0.1.0
+langchain-groq==0.0.1
+
+# Utilities
+numpy==1.24.3
+requests==2.31.0
