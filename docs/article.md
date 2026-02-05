@@ -566,7 +566,7 @@ def lambda_handler(event, context):
 
 The system is in production at TekPixi. We're planning to open-source the core parsing and scoring modules in Q3 2026.
 
-**Repo:** [github.com/tekpixi/resume-scoring-system](#) *(coming soon)*
+**Repo:** [github.com//bharathtbr/ResumeRanker](#) *(coming soon)*
 
 **Documentation:**
 - [Technical Specification](./SPECIFICATION.md) - Complete API specs, database schemas
@@ -598,6 +598,6 @@ What's your experience with resume screening? What would you build differently? 
 
 ---
 
-*This article describes a system built at TekPixi. Technical details are accurate as of January 2026. Source code and detailed documentation available at [github.com/tekpixi/resume-scoring-system](#).*
+*This article describes a system built at TekPixi. Technical details are accurate as of January 2026. Source code and detailed documentation available at [github.com/bharathtbr/ResumeRanker](#).*
 
 *Built with AWS Lambda, Claude 3.5 Sonnet, PostgreSQL, and way too much coffee.*
